@@ -3,7 +3,7 @@ import styled from "styled-components";
 // ESTRUTURE
 export const Container = styled.div`
 display: flex;
-height: 100vh;
+height: 100%;
 `;
 
 export const LeftSide = styled.div`
@@ -48,4 +48,9 @@ a {
 }
 `;
 
-export const RightSide = styled.main``;
+export const RightSide = styled.main`
+flex: 1;
+// border: 1px dashed red;
+margin-top: 1.6em;
+margin-right: 5px;
+`;
