@@ -1,18 +1,19 @@
 import { useEffect, useState } from 'react';
 import * as C from './styles';
+import BackToTop from "react-back-to-top-button";
 
-import ImageList from '../../Components/ImageList';
-
+import GridVariavel from '../../Components/GridVariavel';
+import SimpleGallery from '../../Components/SimpleGallery';
 
 import api from '../../api';
 
 export default () => {
-  const [imageList, setImageList] = useState([]);
+  const [images, setImages] = useState([]);
 
-  useEffect(()=> {
+  useEffect(() => {
     const getRecents = async () => {
       let resp = await api.getRecents();
-      setImageList(resp);
+      setImages(resp);
     };
     getRecents();
   }, []);
@@ -21,12 +22,27 @@ export default () => {
 
   return (
     <C.Container>
-      {imageList.length > 0 &&
-        <ImageList>
-          {imageList.map((item,k) => (
-            <img className="imagem" key={k} data-id={item.id} src={item.image} data-width={item.width} data-height={item.height} alt="" loading="lazy" />
-          ))}
-        </ImageList>
+      {images.length > 0 &&
+        <GridVariavel>
+          <SimpleGallery 
+            galleryID="pswp-gallery-home"
+            images={images} 
+          />
+        </GridVariavel>
+      }
+      {images.length > 0 &&
+        <div className="area-button-back">
+          <BackToTop
+            // showOnScrollUp
+            showAt={1}
+            // speed={1500}
+            // easing="easeInOutQuint"
+            style={{position: 'static'}}
+          >
+            <span className="arrow">↑</span>
+            <span>Back to Top</span>
+          </BackToTop>
+        </div>
       }
     </C.Container>
   )
