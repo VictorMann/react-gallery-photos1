@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
-import SportsFitness from "./Pages/SportsFitness";
+import Category from "./Pages/Category";
 import NotFound from "./Pages/NotFound";
 
 
@@ -9,7 +9,7 @@ export default () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/recent" element={<Home />} />
-      <Route path="/sports-fitness" element={<SportsFitness />} />
+      <Route path="/c/:cat" element={<Category />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   )

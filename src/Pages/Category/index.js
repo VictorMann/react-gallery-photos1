@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import * as C from './styles';
 import BackToTop from "react-back-to-top-button";
 
@@ -7,14 +8,16 @@ import GridBasic from '../../Components/GridBasic';
 
 export default () => {
   const [images, setImages] = useState([]);
+  const { cat } = useParams();
 
   useEffect(() => {
     const fn = async () => {
-      let resp = await api.getSportsFitness();
+      setImages([]);
+      let resp = await api.getCategories(cat);
       setImages(resp);
     };
     fn();
-  }, []);
+  }, [cat]);
 
   return (
     <C.Container>

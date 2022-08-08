@@ -28,21 +28,39 @@ export default {
 
     return data;
   },
-  async getSportsFitness() {
-    let data = [
-      {id: 1, title: 'Nike Swim | Hydrastrong', slug: '/nike-swim-hydrastrong', width: 1245, height: 934, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/4f54eef3-a37e-4136-8e6f-a51db87a8762_rwc_33x0x1245x934x1280.jpg?h=a86ed4b859f288b5b309535bb8d5a1a6'},
-      {id: 2, title: 'LA Marathon | 2021', slug: '/la-marathon-2021', width: 1280, height: 960, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/f8c33f6c-2548-42ba-84bf-51827b46e2b1_rwc_100x0x1708x1281x1280.jpg?h=b943a30c3d58923954287ec5a8f9e3ae'},
-      {id: 3, title: 'Nike Swim | Hydrastrong', slug: '/nike-swim-hydrastrong', width: 1280, height: 960, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/81aedc5e-86db-4c7c-ac7c-78cfe9fe1a9e_carw_4x3x1280.jpg?h=20e1d1e8b8fcb2e75fd513fcd3c2769d'},
-      {id: 4, title: 'LA Marathon | 2021', slug: '/la-marathon-2021', width: 1280, height: 960, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/29ca0237-f97d-456a-aa55-5284c8cb5470_carw_4x3x1280.jpg?h=7e065e0ad6cb6f5ee87fe822f2de8130'},
-      {id: 5, title: 'Nike Swim | Hydrastrong', slug: '/nike-swim-hydrastrong', width: 1280, height: 960, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/4c15b933-37bb-492e-a287-b8ab2eea4129_rwc_371x154x1542x1157x1280.jpg?h=f7bfdb3adf4c5c5638d03584d455b329'},
-      {id: 6, title: 'LA Marathon | 2021', slug: '/la-marathon-2021', width: 1280, height: 960, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/37b5186e-65e6-4bf8-b3ea-d4d94e9d990f_rwc_159x43x1599x1199x1280.jpg?h=49f19cb17b190a4cadde49d305cdcd68'},
-      {id: 7, title: 'Nike Swim | Hydrastrong', slug: '/nike-swim-hydrastrong', width: 1280, height: 960, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/6cbeea3c-77d6-499c-b47c-4342cc238124_rwc_167x29x1598x1198x1280.jpg?h=532a300634dffa5001001e1488aa3dc2'},
-      {id: 8, title: 'LA Marathon | 2021', slug: '/la-marathon-2021', width: 1280, height: 960, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/70c6a38d-162f-4a1c-a4a1-476f5ec2f56a_carw_4x3x1280.jpg?h=57c3203b473b30fb60455b92feb6d1ec'},
-      {id: 9, title: 'Nike Swim | Hydrastrong', slug: '/nike-swim-hydrastrong', width: 826, height: 620, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/e0b0d2ea-a7af-4567-b21d-1aaa475ac506_rwc_48x311x826x620x826.jpg?h=794bad3dbc43fb935500e030e2f33e5e'},
-      {id: 10, title: 'LA Marathon | 2021', slug: '/la-marathon-2021', width: 1280, height: 960, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/950a5c86-344d-48ab-a31b-2908b4bc0e0b_rwc_192x0x2489x1867x1280.jpg?h=c46e73b61fe48395e694ab2932b60682'},
-      {id: 11, title: 'Nike Swim | Hydrastrong', slug: '/nike-swim-hydrastrong', width: 1280, height: 960, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/4e7ba706-c3ea-4d2b-af20-2a7a1aae5da8_rwc_372x0x2100x1575x1280.jpg?h=38cf239d4afe44eafecd5bf90e933ee2'},
-      {id: 12, title: 'LA Marathon | 2021', slug: '/la-marathon-2021', width: 1280, height: 960, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/31b9989c-8f31-49c3-aab1-277618b68627_rwc_85x0x1706x1280x1280.jpg?h=ea9bcd8a43fa456f374291c5a5726cb7'},
-    ];
+  async getCategories(cat) {
+    let data = [];
+    if (cat === 'sports-fitness') {
+      data = [
+        {id: 1, title: 'Nike Swim | Hydrastrong', slug: '/c/1/nike-swim-hydrastrong', width: 1245, height: 934, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/4f54eef3-a37e-4136-8e6f-a51db87a8762_rwc_33x0x1245x934x1280.jpg?h=a86ed4b859f288b5b309535bb8d5a1a6'},
+        {id: 2, title: 'LA Marathon | 2021', slug: '/c/1/la-marathon-2021', width: 1280, height: 960, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/f8c33f6c-2548-42ba-84bf-51827b46e2b1_rwc_100x0x1708x1281x1280.jpg?h=b943a30c3d58923954287ec5a8f9e3ae'},
+        {id: 3, title: 'Nike Swim | Hydrastrong', slug: '/c/1/nike-swim-hydrastrong', width: 1280, height: 960, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/81aedc5e-86db-4c7c-ac7c-78cfe9fe1a9e_carw_4x3x1280.jpg?h=20e1d1e8b8fcb2e75fd513fcd3c2769d'},
+        {id: 4, title: 'LA Marathon | 2021', slug: '/c/1/la-marathon-2021', width: 1280, height: 960, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/29ca0237-f97d-456a-aa55-5284c8cb5470_carw_4x3x1280.jpg?h=7e065e0ad6cb6f5ee87fe822f2de8130'},
+        {id: 5, title: 'Nike Swim | Hydrastrong', slug: '/c/1/nike-swim-hydrastrong', width: 1280, height: 960, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/4c15b933-37bb-492e-a287-b8ab2eea4129_rwc_371x154x1542x1157x1280.jpg?h=f7bfdb3adf4c5c5638d03584d455b329'},
+        {id: 6, title: 'LA Marathon | 2021', slug: '/c/1/la-marathon-2021', width: 1280, height: 960, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/37b5186e-65e6-4bf8-b3ea-d4d94e9d990f_rwc_159x43x1599x1199x1280.jpg?h=49f19cb17b190a4cadde49d305cdcd68'},
+        {id: 7, title: 'Nike Swim | Hydrastrong', slug: '/c/1/nike-swim-hydrastrong', width: 1280, height: 960, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/6cbeea3c-77d6-499c-b47c-4342cc238124_rwc_167x29x1598x1198x1280.jpg?h=532a300634dffa5001001e1488aa3dc2'},
+        {id: 8, title: 'LA Marathon | 2021', slug: '/c/1/la-marathon-2021', width: 1280, height: 960, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/70c6a38d-162f-4a1c-a4a1-476f5ec2f56a_carw_4x3x1280.jpg?h=57c3203b473b30fb60455b92feb6d1ec'},
+        {id: 9, title: 'Nike Swim | Hydrastrong', slug: '/c/1/nike-swim-hydrastrong', width: 826, height: 620, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/e0b0d2ea-a7af-4567-b21d-1aaa475ac506_rwc_48x311x826x620x826.jpg?h=794bad3dbc43fb935500e030e2f33e5e'},
+        {id: 10, title: 'LA Marathon | 2021', slug: '/c/1/la-marathon-2021', width: 1280, height: 960, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/950a5c86-344d-48ab-a31b-2908b4bc0e0b_rwc_192x0x2489x1867x1280.jpg?h=c46e73b61fe48395e694ab2932b60682'},
+        {id: 11, title: 'Nike Swim | Hydrastrong', slug: '/c/1/nike-swim-hydrastrong', width: 1280, height: 960, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/4e7ba706-c3ea-4d2b-af20-2a7a1aae5da8_rwc_372x0x2100x1575x1280.jpg?h=38cf239d4afe44eafecd5bf90e933ee2'},
+        {id: 12, title: 'LA Marathon | 2021', slug: '/c/1/la-marathon-2021', width: 1280, height: 960, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/31b9989c-8f31-49c3-aab1-277618b68627_rwc_85x0x1706x1280x1280.jpg?h=ea9bcd8a43fa456f374291c5a5726cb7'},
+      ];
+    } else if (cat === 'lifestyle') {
+      data = [
+        {id: 1, title: 'Eight Sleep', slug: '/c/1/eight-sleep', width: 1280, height: 960, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/f6654dc3-92e9-4654-9972-2c9636557085_rwc_201x0x1708x1281x1280.jpg?h=618240ab20c548b0d623bcc9ca3eb27a'},
+        {id: 2, title: 'Seea', slug: '/c/1/eight-sleep', width: 1280, height: 960, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/b893ebba-0e06-4848-98da-dd9699b8cb83_rwc_321x204x3219x2414x1280.jpg?h=26c6f479c951ee552cf15f9afe679ab8'},
+        {id: 3, title: 'Eight Sleep', slug: '/c/1/eight-sleep', width: 1245, height: 933, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/f6e8e625-400c-4978-ab7a-fed5b2557f76_rwc_0x0x1245x933x1280.jpg?h=42473ea685a6fad128f47f0d8072d8ad'},
+        {id: 4, title: 'Seea', slug: '/c/1/eight-sleep', width: 1280, height: 960, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/99afb1f0-4ee2-4259-a748-bf8251ddf623_rwc_0x517x1867x1400x1280.jpg?h=03be0d592e2cf97581f5af60da4e7a79'},
+        {id: 5, title: 'Eight Sleep', slug: '/c/1/eight-sleep', width: 1000, height: 749, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/b20f88ed-342d-4c4b-b7d2-a0bf39278987_rwc_0x132x1000x749x1000.jpg?h=d000325356f19cfef82f2f05e1e62d4c'},
+        {id: 6, title: 'Seea', slug: '/c/1/eight-sleep', width: 756, height: 567, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/728a6a3a596b1b487eaef585b9c7f482d8d7f2936d9a76e80fe4cfae7f4cb77e9dac74f0e37914b4_carw_4x3x1280.jpg?h=9d3959b32775389375f79c7e93419a1d&url=aHR0cHM6Ly9taXItczMtY2RuLWNmLmJlaGFuY2UubmV0L3Byb2plY3RzL29yaWdpbmFsL2I3NDJiYzUwMTc4OTY1LlkzSnZjQ3czTkRnc05UZzFMRFVzTUEuanBn'},
+      ];
+    } else if (cat === 'personal') {
+      data = [
+        {id: 1, title: "Swami's", slug: '/c/1/swamis', width: 1280, height: 960, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/771daa2d-56cb-4f8d-866b-ad04a18fc916_rwc_338x51x2256x1692x1280.jpg?h=bacefe3c80e93878bcd559f66fec2f72'},
+        {id: 2, title: "Iceland Tourist", slug: '/c/1/iceland-tourist', width: 1280, height: 961, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/0a919979-4bb1-40d5-be77-af90e80c255b_rwc_0x814x1599x1200x1280.jpg?h=31d66a7d34c7ae5e7656587c47d017ab'},
+        {id: 3, title: "Wanderings", slug: '/c/1/wanderings', width: 1280, height: 960, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/2c7bae19-a7cc-4256-a9f6-1e74326d8275_rwc_0x0x1706x1280x1280.jpg?h=b17ecb3cb399482cbc66dc8f426d630e'},
+      ];
+    }
 
     data = data.map(item => {
       item.thumbnailURL = item.image;
