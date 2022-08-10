@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Container = styled.div.attrs({className: 'grid-image-variavel'})`
 display: none;
 
-#pswp-gallery-home {
+#${props => props.childrenID} {
   display: flex;
   flex-wrap: wrap;
   // width: 5000px;

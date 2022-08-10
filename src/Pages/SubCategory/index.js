@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import * as C from './styles';
 import BackToTop from "react-back-to-top-button";
 
@@ -7,25 +8,26 @@ import SimpleGallery from '../../Components/SimpleGallery';
 
 import api from '../../api';
 
+
 export default () => {
   const [images, setImages] = useState([]);
+  const { subcat } = useParams();
 
   useEffect(() => {
-    const getRecents = async () => {
-      let resp = await api.getRecents();
+    const fn = async () => {
+      setImages([]);
+      let resp = await api.getCategories(subcat);
       setImages(resp);
     };
-    getRecents();
-  }, []);
-
-
+    fn();
+  }, [subcat]);
 
   return (
     <C.Container>
       {images.length > 0 &&
-        <GridVariavel childrenID="pswp-gallery-home">
+        <GridVariavel childrenID="pswp-gallery-cat">
           <SimpleGallery 
-            galleryID="pswp-gallery-home"
+            galleryID="pswp-gallery-cat"
             images={images} 
           />
         </GridVariavel>

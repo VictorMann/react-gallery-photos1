@@ -60,6 +60,19 @@ export default {
         {id: 2, title: "Iceland Tourist", slug: '/c/1/iceland-tourist', width: 1280, height: 961, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/0a919979-4bb1-40d5-be77-af90e80c255b_rwc_0x814x1599x1200x1280.jpg?h=31d66a7d34c7ae5e7656587c47d017ab'},
         {id: 3, title: "Wanderings", slug: '/c/1/wanderings', width: 1280, height: 960, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/2c7bae19-a7cc-4256-a9f6-1e74326d8275_rwc_0x0x1706x1280x1280.jpg?h=b17ecb3cb399482cbc66dc8f426d630e'},
       ];
+    } else if (cat === 'nike-swim-hydrastrong') {
+      data = [
+        {id: 1, row: 1, width: 506, height: 900, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/df5b8c80-fe7d-4a9f-8f06-52711b38df45_rw_600.gif?h=4f1addb1f13955f178def1abbbced792'},
+        {id: 2, row: 1, width: 1920, height: 1281, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/13a7543f-8cee-411a-8a31-0f0473e467b0_rw_1920.jpg?h=fc5eac4c582c0a8937199054cab3bdb1'},
+        {id: 3, row: 1, width: 600, height: 900, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/5777d774-c114-4ca1-95b1-a6ae337eaf4b_rw_600.jpg?h=349e047d7a0e46273011592977b949ea'},
+        {id: 4, row: 1, width: 600, height: 900, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/4bebe2d5-fcd4-4406-90e4-2c7982876725_rw_600.gif?h=1c4e2f628f30945c023e81fc12942dbe'},
+        {id: 5, row: 1, width: 600, height: 900, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/8cd9423e-056e-4891-a154-2de63d62d833_rw_600.gif?h=78edf20ea1f7e5892b1663b738ab4b95'},
+        {id: 6, row: 1, width: 600, height: 400, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/93dacf2e-e588-4796-a0d2-2fcbd8851451_rw_600.jpg?h=d750a9f58826c4e3ac01cc7fb8e61381'},
+        {id: 7, row: 2, width: 600, height: 900, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/2a6434c9-dba7-41af-9b73-4e3b73aecac4_rw_600.gif?h=1f039f0627d1a58e7de0f411e389a84f'},
+        {id: 8, row: 2, width: 600, height: 400, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/33bd0eaa-ff82-4556-a372-fcc3f52912ab_rw_600.gif?h=f24bf5c27c21d6e70e9cc92d0a873ade'},
+        {id: 9, row: 2, width: 600, height: 400, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/31f9512c-6c95-4c0e-bcc0-72b22b0e0153_rw_600.jpg?h=03630539cd083e45c5ab7b611dd2d785'},
+        {id: 10, row: 2, width: 600, height: 899, image: 'https://cdn.myportfolio.com/6ddb748e7455b951706cf3e4b96619a0/0aa60519-997b-4ae7-a6fb-6129a4399888_rw_600.gif?h=dad81de424e9711f4c99238d26f99ce7'},
+      ];
     }
 
     data = data.map(item => {

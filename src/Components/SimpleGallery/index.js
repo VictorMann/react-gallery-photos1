@@ -28,6 +28,7 @@ function SimpleGallery({ galleryID, images }) {
           data-width={image.width}      // NOTE: utilizado na plug-grid-image.js (Não é necessário no funcionamento do Photoswipe) 
           data-height={image.height}    // NOTE: utilizado na plug-grid-image.js (Não é necessário no funcionamento do Photoswipe) 
           data-per={image.per}          // NOTE: utilizado na plug-grid-image.js (Não é necessário no funcionamento do Photoswipe) 
+          data-row={image.row}          // NOTE: utilizado na plug-grid-image.js (Não é necessário no funcionamento do Photoswipe) 
           
           key={galleryID + '-' + index}
           target="_blank"
