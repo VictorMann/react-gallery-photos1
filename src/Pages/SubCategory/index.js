@@ -7,11 +7,13 @@ import GridVariavel from '../../Components/GridVariavel';
 import SimpleGallery from '../../Components/SimpleGallery';
 
 import api from '../../api';
+import GridOne from '../../Components/GridOne';
 
 
 export default () => {
   const [images, setImages] = useState([]);
   const { subcat } = useParams();
+  let hasGridOne = ['la-marathon-2021', 'eight-sleep', 'swamis'];
 
   useEffect(() => {
     const fn = async () => {
@@ -25,12 +27,21 @@ export default () => {
   return (
     <C.Container>
       {images.length > 0 &&
-        <GridVariavel childrenID="pswp-gallery-cat">
-          <SimpleGallery 
-            galleryID="pswp-gallery-cat"
-            images={images} 
-          />
-        </GridVariavel>
+        (hasGridOne.indexOf(subcat) != -1)
+        ?
+          <GridOne childrenID="pswp-gallery-cat">
+            <SimpleGallery 
+              galleryID="pswp-gallery-cat"
+              images={images} 
+            />
+          </GridOne>
+        :
+          <GridVariavel childrenID="pswp-gallery-cat">
+            <SimpleGallery 
+              galleryID="pswp-gallery-cat"
+              images={images} 
+            />
+          </GridVariavel>
       }
       {images.length > 0 &&
         <div className="area-button-back">

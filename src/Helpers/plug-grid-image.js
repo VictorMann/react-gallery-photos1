@@ -81,7 +81,7 @@ export default {
         // Aplicando cálculo
         row.forEach(el => {
           let width = parseInt(el.dataset.width);
-          let per = el.dataset.per ? parseInt(el.dataset.per) : ((width || 0) / tam) * 100;
+          let per = el.dataset.per ? el.dataset.per : ((width || 0) / tam) * 100;
           el.style.width = `calc(${per}% - ${padding}px)`;
         });
       });
