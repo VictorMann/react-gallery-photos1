@@ -13,7 +13,7 @@ export default () => {
   useEffect(() => {
     const fn = async () => {
       setImages([]);
-      let resp = await api.getCategories(cat);
+      let resp = await api.getCategories(cat, 1); // 1 = rota: sub-categories
       setImages(resp);
     };
     fn();

@@ -17,7 +17,7 @@ export default (props) => {
   return (
     <C.Container {...props}>
       {props.images.map((item, index) => (
-        <Link key={index} to={item.slug}>
+        <Link key={index} to={`/c/1/${item.slug}`}>
           <img src={item.thumbnailURL} alt="" loading="lazy" />
           <span>{item.title}</span>
         </Link>

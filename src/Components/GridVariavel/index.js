@@ -6,8 +6,13 @@ let flag = 0;
 export default ({ children, childrenID }) => {
 
   useEffect(() => {
-    clearTimeout(flag);
-    flag = setTimeout(() => gridImage.run('grid-image-variavel'), 100);
+    flag = setInterval(() => {
+      let grid = document.querySelector('.pswp-gallery');
+      if (grid && grid.children.length) {
+        clearInterval(flag);
+        gridImage.run('grid-image-variavel');
+      }
+    }, 100);
   }, []);
 
   return (
